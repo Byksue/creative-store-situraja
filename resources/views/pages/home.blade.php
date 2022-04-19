@@ -53,6 +53,14 @@
                 </div>
             </div>
         </section>
+        {{-- <section class="search-bar">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="mt-3">Search for Product</h5>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </section> --}}
         <section class="store-trend-categories">
             <div class="container">
                 <div class="row">

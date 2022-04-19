@@ -9,6 +9,33 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       @auth
+        <ul class="navbar-nav mr-auto">
+          {{-- Desktop --}}
+          <li class="nav-item col-xs-3 d-none d-lg-flex" >
+            <form class="form-inline" method="GET" action="{{ route('search-product') }}">
+              @csrf
+              <div class="input-group flex-nowrap">
+                <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ isset($key) ? $key : '' }}">
+                <div class="input-group-prepend">
+                  <button class="btn btn-success" type="submit" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </div>
+            </form>
+          </li>
+
+          {{-- Mobile --}}
+          <li class="nav-item col-xs-3 mt-3 d-block d-lg-none" >
+            <form class="form-inline" method="GET" action="{{ route('search-product') }}">
+              @csrf
+              <div class="input-group flex-nowrap">
+                <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ isset($key) ? $key : '' }}">
+                <div class="input-group-prepend">
+                  <button class="btn btn-success" type="submit" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
               <a class="nav-link" href="/">Home </a>
@@ -95,6 +122,33 @@
           @endif
         </ul>
       @else
+        <ul class="navbar-nav mr-auto">
+          {{-- Desktop --}}
+          <li class="nav-item col-xs-3 d-none d-lg-flex" >
+            <form class="form-inline" method="GET" action="{{ route('search-product') }}">
+              @csrf
+              <div class="input-group flex-nowrap">
+                <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ isset($key) ? $key : '' }}">
+                <div class="input-group-prepend">
+                  <button class="btn btn-success" type="submit" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </div>
+            </form>
+          </li>
+
+          {{-- Mobile --}}
+          <li class="nav-item col-xs-3 mt-3 d-block d-lg-none" >
+            <form class="form-inline" method="GET" action="{{ route('search-product') }}">
+              @csrf
+              <div class="input-group flex-nowrap">
+                <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ isset($key) ? $key : '' }}">
+                <div class="input-group-prepend">
+                  <button class="btn btn-success" type="submit" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="{{ route('home') }}">Home </a>

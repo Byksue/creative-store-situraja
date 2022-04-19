@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\ProductGalleryController as AdminProductGalleryController;
 use App\Http\Controllers\ProductReviewController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserSettingController;
 
 /*
@@ -53,6 +54,9 @@ Route::put('/user/update/{id}', [UserSettingController::class, 'update'])->name(
 // Reveiew Produk Controller
 Route::get('/reviews/{id}', [ProductReviewController::class, 'index'])->name('review-product')->middleware('auth');
 Route::post('/reviews/add/', [ProductReviewController::class, 'store'])->name('add-review-product')->middleware('auth');
+
+// Search Controller
+Route::get('/search', [SearchController::class, 'index'])->name('search-product');
 
 // Dashboard Admin Controller
 Route::prefix('admin')
